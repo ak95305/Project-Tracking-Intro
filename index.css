@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
+}
+
+#header {
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px 8% 0px 4%;
+  position: relative;
+  width: 85%;
+}
+
+#header #hamburger {
+  display: none;
+}
+
+#header #nav-bar {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 1000;
+  font-size: 0.9rem;
+}
+
+#header #nav-bar #item-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header #nav-bar #item-list li {
+  padding: 0px 14px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+}
+
+#header #nav-bar #item-list li:hover {
+  text-decoration: underline;
+}
+
+#header #nav-bar #item-list #item3 {
+  margin-right: 2em;
+}
+
+#header #nav-bar #login-list li {
+  padding: 9px 0px 0px 20px;
+  list-style: none;
+  cursor: pointer;
+}
+
+#header #nav-bar #login-list li:hover {
+  text-decoration: underline;
+  color: #a0a1ac;
+}
+
+#header #nav-bar #login-list li::before {
+  content: "\2022";
+  color: #a0a1ac;
+  font-weight: bold;
+  display: inline-block;
+  width: 3em;
+  margin-left: -2em;
+}
+
+#content #intro {
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  width: 50%;
+  padding-left: 5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+#content #intro #small-heading {
+  letter-spacing: 4px;
+  font-size: 20px;
+}
+
+#content #intro #small-heading #new-letter {
+  background-color: #242942;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0px 5px 0px 10px;
+}
+
+#content #intro #big-heading {
+  font-size: 30px;
+  font-weight: 1000;
+  color: #242942;
+}
+
+#content #intro #detail {
+  font-family: "Barlow", sans-serif;
+  width: 50%;
+  font-size: 20px;
+  color: #5b5f71;
+}
+
+#content #intro #button button {
+  background-color: #ff5c5c;
+  border: none;
+  font-family: "Barlow", sans-serif;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+#content #intro #button button:hover {
+  opacity: 0.8;
+}
+
+#content #intro #button #button-text {
+  letter-spacing: 5px;
+  margin-left: 20px;
+  color: #a0a1ac;
+}
+
+#content #image {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 0;
+}
+
+#content #image #bg-screen {
+  background-color: #eef3f6;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  z-index: -1;
+  border-bottom-left-radius: 50px;
+}
+
+#content #image img {
+  margin-top: 150px;
+  z-index: 999;
+}
+
+@media only screen and (max-width: 375px) {
+  #nav-bar {
+    display: none !important;
+  }
+  #hamburger {
+    display: inline !important;
+  }
+  #nav-bar {
+    display: none !important;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+    row-gap: 20px;
+    position: absolute;
+    padding: 0 !important;
+    top: 100%;
+    width: 100%;
+    padding: 20px 0px !important;
+    background-color: #fff;
+    -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #nav-bar #item-list {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+    row-gap: 20px;
+  }
+  #nav-bar #item-list li {
+    text-align: center;
+  }
+  #nav-bar #item-list #item3 {
+    margin: 0 !important;
+    width: 100%;
+  }
+  #nav-bar #login-list li::before {
+    content: normal !important;
+  }
+  #nav-bar #login-list li {
+    padding: 0 !important;
+    text-align: center;
+    border-top: 1px solid #5b5f71;
+    padding-top: 20px !important;
+    width: 80%;
+    margin: auto;
+  }
+  #content #intro {
+    top: 70%;
+  }
+  #content #intro #small-heading {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+  }
+  #content #intro #detail {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  #content #intro #button #button-text {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+  #content #image {
+    height: 110%;
+  }
+  #content #image img {
+    margin-top: 60%;
+    margin-left: -75%;
+    width: 240%;
+  }
+}
+/*# sourceMappingURL=index.css.map */
